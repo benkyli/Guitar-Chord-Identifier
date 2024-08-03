@@ -9,18 +9,17 @@ from sklearn.model_selection import train_test_split
 randomSeed = 8 # this can be any number
 
 # get paths for dataset and model
-datasetName = 'chordDataset.csv'
-root = os.path.dirname(__file__)
-datasetPath = os.path.join(root, datasetName)
+dataset_name = 'chordDataset.csv'
+dataset_path = f'Datasets/{dataset_name}'
 
 
 def main():
      # get number of chord classes
-    class_dict, numClasses, chords = count_classes(datasetPath)
+    class_dict, numClasses, chords = count_classes(dataset_path)
 
     # prepare data
-    X_dataset = np.loadtxt(datasetPath, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 2)))
-    Y_dataset = np.loadtxt(datasetPath, delimiter=',', dtype='str', usecols=(0))
+    X_dataset = np.loadtxt(dataset_path, delimiter=',', dtype='float32', usecols=list(range(1, (21 * 2) + 2)))
+    Y_dataset = np.loadtxt(dataset_path, delimiter=',', dtype='str', usecols=(0))
     Y_dataset = [class_dict[classifier] for classifier in Y_dataset] # convert classifiers into ints, since strings weren't working properly
 
     # create training and testing sets + put them into numpy arrays

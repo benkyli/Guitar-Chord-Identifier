@@ -24,7 +24,7 @@ Enter the chord you want to sample:
 * Only include your fretting hand in the shot. Including your strumming hand can create unreliable datapoints. 
 
 ### Dataset description
-##### 
+##### The dataset will be placed in the _Datasets_ folder as a CSV file. The column descriptions are given below:
 * Column 1: Chord name
 * Column 2: Handedness (0 = left, 1 = right)
 * Columns 3-44: Relative X and Y coordinates of hand landmarks (Odd columns = X, Even columns = Y)

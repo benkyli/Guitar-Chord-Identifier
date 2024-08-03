@@ -13,8 +13,8 @@ hands = mpHands.Hands()             # default method captures 2 hands; 1 hand ma
 mpDraw = mp.solutions.drawing_utils # method for showing hand joints on camera
 
 # get dataset csv path
-root = os.path.dirname(__file__)
-dataset_path = os.path.join(root, 'chordDataset.csv')
+dataset_name = 'chordDataset.csv'
+dataset_path = f'Datasets/{dataset_name}'
 
 
 def main():
